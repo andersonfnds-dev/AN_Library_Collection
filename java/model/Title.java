@@ -18,21 +18,21 @@ public class Title {
 	@Column(name = "cod_title")
 	private Long id;
 	
-	private String nome;
+	private String name;
 			
 	@ManyToOne
 	private Author author;
 	
-	@OneToMany
+	@OneToMany 
 	private List<Book> books;
 
 	public Title() {
 		super();
 	}
 
-	public Title(String nome, Author author) {
+	public Title(String name, Author author) {
 		super();
-		this.nome = nome;
+		this.name = name;
 		this.author = author;
 	}
 
@@ -44,12 +44,12 @@ public class Title {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String nome) {
+		this.name = nome;
 	}
 
 	public Author getAuthor() {
@@ -67,8 +67,5 @@ public class Title {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
-	
-	
-	
 
 }

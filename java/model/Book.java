@@ -15,6 +15,7 @@ public class Book {
 	@Column(name = "cod_book")
 	private Long id;
 	
+	
 	@ManyToOne
 	private Title title;
 	
